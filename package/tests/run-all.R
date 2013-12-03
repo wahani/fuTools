@@ -1,4 +1,4 @@
 library(testthat)
-library(templatePackage)
+library(fuTools)
 
-test_package("templatePackage")
+test_package("fuTools")

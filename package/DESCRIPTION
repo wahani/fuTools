@@ -1,15 +1,12 @@
-Package: templatePackage
+Package: fuTools
 Type: Package
-Title: templatePackage
+Title: fuTools
 Version: 0.1
-Author: ME
-Maintainer: <my@address.world>
+Author: me
+Maintainer: <wahani@gmail.com>
 Depends: 
         R(>= 3.0), 
-        testthat,
-        Rcpp (>= 0.10.5), 
-        RcppArmadillo (>= 0.3.920.1)
+        testthat
 ByteCompile: TRUE
-Description: My template package
+Description: At this point an implementation of the fixed point algorithm.
 License: GPL
-LinkingTo: Rcpp, RcppArmadillo
