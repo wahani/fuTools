@@ -2,11 +2,9 @@ Package: fuTools
 Type: Package
 Title: fuTools
 Version: 0.1
-Author: me
+Author: Sebastian Warnholz
 Maintainer: <wahani@gmail.com>
 Depends: 
-        R(>= 3.0), 
-        testthat
-ByteCompile: TRUE
+        R(>= 3.0)
 Description: At this point an implementation of the fixed point algorithm.
 License: GPL
