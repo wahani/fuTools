@@ -7,6 +7,7 @@
 #' @param x0 starting value for x. Will be coerced to numeric.
 #' @param opts list of options used in the algorithm. At this point only \code{tol}
 #' and \code{maxiter} are supported
+#' @param ... additional arguments passed to \code{fun}
 #' 
 #' @return Returns a list including:
 #' \itemize{
@@ -48,7 +49,8 @@
 #' @export
 #' 
 fp <- function(fun, x0, opts = list(tol = 1e-06,
-                                    maxiter = 100)) {
+                                    maxiter = 100),
+               ...) {
   
   # Helper-Functions
   isTolReached <- function(x, y) {
@@ -69,7 +71,7 @@ fp <- function(fun, x0, opts = list(tol = 1e-06,
   while (ret$iterations <= opts$maxiter) {
     
     ret$iterations <- ret$iterations + 1
-    tmp <- try(fun(x0))
+    tmp <- try(fun(x0, ...))
     
     # Error handling:
     if (inherits(tmp, "try-error")) {

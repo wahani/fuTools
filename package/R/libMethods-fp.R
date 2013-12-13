@@ -10,9 +10,9 @@ print.fp <- function(x, ...) {
 #' @S3method summary fp
 summary.fp <- function(object, ...) {
   
-  cat("\nSolution: ", object$x, 
-      "\nIterations: ", object$iterations, 
-      "\nStatus: ", .get.fp(object$returnStatus), sep = "")
+  cat("\nSolution:", object$x, 
+      "\nIterations:", object$iterations, 
+      "\nStatus:", .get.fp(object$returnStatus), sep = " ")
   
   if(!is.null(object$errorMessage)) {
     cat("\nMessage: ", object$errorMessage, 

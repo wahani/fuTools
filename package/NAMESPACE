@@ -1,3 +1,3 @@
-export(fp)
 S3method(print,fp)
 S3method(summary,fp)
+export(fp)
