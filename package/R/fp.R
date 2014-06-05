@@ -54,6 +54,13 @@ fp <- function(fun, x0, opts = list(tol = 1e-06,
   
   # Helper-Functions
   isTolReached <- function(x, y) {
+    # Exceptions:
+    if(all(x == y)) return(TRUE)
+    if(any(x == 0)) {
+      warning("Parameter is 0 and the ouput will state convergence. Check if this is plausible!")
+      return(TRUE)
+    }
+    # Relative difference
     all(abs((x - y)/x) < opts$tol)
   }
   
