@@ -1,9 +1,10 @@
 Readme
 ========================================================
 
+This is a R package. Install it and see the documentation for details.
+
 Installation
 ----------------------
 ```
-library(devtools)
-install_github("fuTools", "wahani", subdir = "package")
+devtools::install_github("wahani/fuTools")
 ```
